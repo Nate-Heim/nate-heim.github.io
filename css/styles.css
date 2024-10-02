@@ -1,0 +1,44 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300&display=swap');
+
+/* Custom Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Fun font for regular text */
+}
+
+.custom-hero {
+    background-color: darkslateblue; /* Change this to your desired intro color */
+    color: white; /* Change text color if necessary */
+}
+
+.navbar {
+    background-color: black; /* Set navbar background to black */
+    position: relative; /* Default position */
+    transition: top 0.3s; /* Smooth transition for the sticky effect */
+}
+
+.navbar-item {
+    color: white; /* Set navbar text color to white */
+    font-family: 'Montserrat', sans-serif; /* Block font for navbar */
+    font-weight: bold; /* Make the navbar font bold */
+    text-transform: uppercase; /* Uppercase text for a block effect */
+}
+
+.navbar-item:hover {
+    color: blue; /* Change text color to blue on hover */
+    background-color: green; /* Green background on hover */
+}
+
+.section {
+    margin-top: 20px;
+}
+
+/* Make the navbar sticky */
+.sticky {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect */
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="/css/bulma.css">
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Added custom CSS file -->
+</head>
+<body>
+    <!-- Include Navbar!!!!! -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('/pages/nav-bar.html')  // Updated path to navbar.html
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <section class="hero custom-hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Hi, I'm Nate Heim.
+                </h1>
+                <h2 class="subtitle">
+                    <i>Let me tell you about my work and skills</i>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section" id="about">
+            <h2 class="title"><u>About</u></h2>
+            <p><i>I'm a passionate developer with experience in various technologies. I love building web applications and exploring new tools. Currently I am a Junior in
+                college working towards a Bachelors of Science in Computer Science. I am always looking for new opportunities to learn and grow.
+            </i></p>
+        </section>
+
+        <section class="section" id="contact">
+            <h2 class="title"><u><strong><u>Contact</u></strong></u></h2>
+            <p><i>If you'd like to get in touch, feel free to reach out via email at </i><a href="mailto:heim.nathanb@gmail.com"><strong>Gmail</strong></a>, 
+                <a href="mailto:nh206337@umconnect.umt.edu"><strong>School</strong></a>.</p>
+        </section>
+
+        <section class="section" id="experience">
+            <h2 class="title"><u>Experience</u></h2>
+            <p><i>I have worked on several projects in my school career. From building a working database from the bottom up, to designing webpages, like this one,
+                and many more projects. I have experience in Java, Python, HTML, MySQL, CSS, and JavaScript. I have also worked with frameworks like SpringBoot, Django, and Bulma.</i>
+            </p>
+            <div id="skills-graph-container"></div> <!-- Placeholder for the graph -->
+        </section>
+
+        <section class="section" id="projects">
+            <h2 class="title"><u>Projects</u></h2>
+            <p><i>Check out my work on GitHub</i> <a href="https://github.com/Nate-Heim" target="_blank">My Codespace</a></p>
+            <p>Here is one of my current projects I've done! <a href="https://github.com/Nate-Heim/company-website">Company Website</a></p>
+        </section>
+
+        <section class="section" id="skills">
+            <h2 class="title"><u>Skills & Tools</u></h2>
+            <ul>
+                <li>Languages: HTML, CSS, JavaScript, Python, Java, MySQL</li>
+                <li>Frameworks: SpringBoot, Django, Bulma</li>
+                <li>Tools: Git, Visual Studio Code</li>
+            </ul>
+        </section>
+
+        <section class="section" id="resume">
+            <h2 class="title"><u>Resume</u></h2>
+            <p>You can download my resume <a href="none" target="_blank">here</a>.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>My Portfolio</strong> by <a href="https://yourwebsite.com">Nate Heim</a>. 
+                The source code is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a>.
+            </p>
+        </div>
+    </footer>
+    
+
+    <!-- Loading the JavaScript file for the skills graph and navbar-->
+    <script src="/js/loadSkillsGraph.js"></script>
+    <script src="/js/loadNavBar.js"></script>
+</body>
+</html>
