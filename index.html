@@ -1,43 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    <link rel="stylesheet" href="css/bulma.css">
-    <link rel="stylesheet" href="css/styles.css"> <!-- Added custom CSS file -->
-    <style>
-        .skills-graph {
-            margin: 20px 0;
-        }
-
-        .skill {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .skill span {
-            width: 150px; /* Adjusted the width */
-            margin-right: 10px;
-        }
-
-        .bar {
-            height: 20px;
-            background-color: #d1ce00; /*bar color */
-            border-radius: 5px;
-            transition: width 0.5s ease;
-            flex-grow: 1; /* Makes the bar responsive */
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"> <!-- Using Bulma from CDN -->
+    </head>
 <body>
-    <!-- Include Navbar -->
+    <!-- Navbar -->
     <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="#">Nate Heim</a>
+            <button class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
-        <div class="navbar-menu">
+        <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
                 <a class="navbar-item" href="#about">About</a>
                 <a class="navbar-item" href="#experience">Experience</a>
@@ -79,34 +59,50 @@
 
         <section class="section" id="skills">
             <h2 class="title"><u>Skills & Tools</u></h2>
-            <div class="skills-graph">
+            <div class="content skills-graph">
                 <h3 class="subtitle">Skills & Experience</h3>
-                <div class="skill">
-                    <span>HTML</span>
-                    <div class="bar" style="width: 37.5%;"></div>
+                <div class="columns is-mobile">
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">HTML</label>
+                            <div class="control">
+                                <progress class="progress is-warning" value="37.5" max="100">37.5%</progress>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">CSS</label>
+                            <div class="control">
+                                <progress class="progress is-warning" value="37.5" max="100">37.5%</progress>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Java</label>
+                            <div class="control">
+                                <progress class="progress is-warning" value="15" max="100">15%</progress>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="field">
+                            <label class="label">Python</label>
+                            <div class="control">
+                                <progress class="progress is-warning" value="45" max="100">45%</progress>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">MySQL</label>
+                            <div class="control">
+                                <progress class="progress is-warning" value="25" max="100">25%</progress>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill">
-                    <span>CSS</span>
-                    <div class="bar" style="width: 37.5%;"></div>
-                </div>
-                <div class="skill">
-                    <span>Java</span>
-                    <div class="bar" style="width: 15%;"></div>
-                </div>
-                <div class="skill">
-                    <span>Python</span>
-                    <div class="bar" style="width: 45%;"></div>
-                </div>
-                <div class="skill">
-                    <span>MySQL</span>
-                    <div class="bar" style="width: 25%;"></div>
-                </div>
+                <ul>
+                    <li>Languages: HTML, CSS, JavaScript, Python, Java, MySQL</li>
+                    <li>Frameworks: SpringBoot, Django, Bulma</li>
+                    <li>Tools: Git, Visual Studio Code</li>
+                </ul>
             </div>
-            <ul>
-                <li>Languages: HTML, CSS, JavaScript, Python, Java, MySQL</li>
-                <li>Frameworks: SpringBoot, Django, Bulma</li>
-                <li>Tools: Git, Visual Studio Code</li>
-            </ul>
         </section>
 
         <section class="section" id="projects">
