@@ -1,6 +1,6 @@
 // loadSkillsGraph.js
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/pages/skills-graph.html')  // Updated path to the HTML file
+    fetch('pages/skills-graph.html')  // Updated path to the HTML file
         .then(response => response.text())
         .then(data => {
             document.getElementById('skills-graph-container').innerHTML = data;
