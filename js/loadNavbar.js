@@ -1,6 +1,6 @@
 // loadNavBar.js
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('/pages/navbar.html')
+    fetch('pages/navbar.html')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
