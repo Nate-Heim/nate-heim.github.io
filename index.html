@@ -51,6 +51,15 @@
                 and many more projects. I have experience in Java, Python, HTML, MySQL, CSS, and JavaScript. I have also worked with frameworks like SpringBoot, Django, and Bulma.</i>
             </p>
             <div id="skills-graph-container"></div> <!-- Placeholder for the graph -->
+            <script>
+                fetch('pages/skills-graph.html')  // Updated path to the HTML file
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('skills-graph-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the graph:', error));
+});
+            </script>
         </section>
 
         <section class="section" id="projects">
